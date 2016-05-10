@@ -166,7 +166,7 @@ a.button span {
 }
 
 #cgmisc-logo span {
-  background: transparent url(../images/cgmisc-logo.png) 30px 50% no-repeat;
+  background: transparent url(../images/cgmisc-logo.png) 20px 50% no-repeat;
 }
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;

@@ -10,7 +10,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Tactile Theme by Jason Long</title>
+    <title>cgmisc package</title>
   </head>
 
   <body>
@@ -18,39 +18,50 @@
       <div class="inner">
 
         <header>
-          <h1>cgmisc package</h1>
+          <h1><img src="images/cgmisc-logo.png" alt="logo" />cgmisc package</h1>
           <h2>enhanced data analysis and visualisation</h2>
         </header>
 
         <section id="downloads" class="clearfix">
-          <a href="https://github.com/jasonlong/tactile-theme/archive/master.zip" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/jasonlong/tactile-theme/archive/master.tar.gz" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/cgmisc-team/cgmisc/archive/master.zip" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/jasonlong/tactile-theme/archive/master.tar.gz" id="download-tar-gz" class="button"><span>Download PDF</span></a>
           <a href="https://github.com/cgmisc-team/cgmisc/" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
 
         <hr>
 
         <section id="main_content">
-        <h1>Headline 1</h1>
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>
+        <h1>Overview</h1>
+        <p><strong>cgmisc</strong> is an R package that enables enhanced data analysis and visualization of results from GWAS. The package contains several utilities and modules that complement and enhance the functionality of the existing software. It also provides several tools for advanced visualization of genomic data and utilizes the power of the R language to aid in preparation of publication-quality figures. Some of the package functions are specific for the domestic dog (<em>Canis familiaris</em>) data.</p>
 
-        <div class="highlight">
-        <pre><span class="nb">require</span> <span class="s1">'redcarpet'</span>
-<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
-<span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span></pre>
+        <h2>Installation</h2>
+        <p>The <strong>cgmisc</strong> package is available on GitHub and can be installed with the help of the <strong>devtools</strong> package:</p>
+        
+       <div class="highlight">
+        <pre><span class="nb">install.packages</span><span class="o">(</span><span class="s1">'devtools'</span><span class="o">)</span>
+<span class="nb">require</span><span class="o">(</span><span class="s1">devtools</span><span class="o">)</span>
+<span class="nb">install_github</span><span class="o">(</span><span class="s1">'cgmisc-team/cgmisc'</span><span class="o">)</span>
+<span class="nb">require</span><span class="o">(</span><span class="s1">cgmisc</span><span class="o">)</span></pre>
         </div>
+        <p>Now the package is ready to use.
+        In the next chapter we will guide you through its main functionalities. The more detailed instructions can be found in the vignette provided with the package or downloaded <strong>here</strong>.</p>
+                
+        <h2>Data</h2>
+        <p>Whenever possible, the <strong>cgmisc</strong> package works with data structures implemented and used by the <a href="http://www.genabel.org/">GenABEL package</a>. In particular, the gwaa.data-class and the gwaa.scan-class structures are used.
+The package is shipped with an example dataset called <strong>cgmisc_data</strong>. The example dataset contains genotyping data (Illumina CanineHD array, canFam2 assembly) for N=207 German shepherds originally collected for the project described in <a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003475">this</a> study. However, to illustrate various features of the <strong>cgmisc</strong> package, the phenotypes included in the example dataset have been simulated. Use the following command to load the example dataset:</p>
 
-        <h2>Headline 2</h2>
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>
-        <h3>Headline 3</h3>
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>
-        <h4>Headline 4</h4>
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>
-        <h5>Headline 5</h5>
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>
-        <h6>Headline 6</h6>
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>        </section>
-
+		<div class="highlight">
+		<pre><span class="nb">data</span><span class="o">(</span><span class="s1">'cgmisc_data'</span><span class="o">)</span></div>
+		
+        <h2>Example analyses</h2>
+		  <p>In the vignette (link) we provide the example GWAS analysis pipeline to demonstrate package capabilities in a series of practical examples based on a showcase data included in the package.</p>
+        <h2>Bugs reporting</h2>
+		  <p>If you encounter a bug or you have any question regarding the package, do not hesitate to contact us!
+		  We are waiting for your feedback to make our package better!<br>
+		  Send e-mail to <a href="mailto:marcin.kierczak@imbim.uu.se">Marcin</a><br>
+		  Send e-mail to <a href="mailto:jagoda100jablonska@gmail.com">Jagoda</a><br>
+		  Send e-mail to <a href="mailto:simon.forsberg@slu.se">Simon</a><br>
+		  Our team <a href="https://github.com/cgmisc-team">page</a></p>
         <footer>
           tactile-theme is maintained by <a href="https://github.com/jasonlong">jasonlong</a><br>
           This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
