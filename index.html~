@@ -44,7 +44,7 @@
 <span class="nb">require</span><span class="o">(</span><span class="s1">cgmisc</span><span class="o">)</span></pre>
         </div>
         <p>Now the package is ready to use.
-        In the next chapter we will guide you through its main functionalities. The more detailed instructions can be found in the vignette provided with the package or downloaded <a href="files/cgmisc-vignette.pdf">here</a> .</p>
+        In the next chapter we will guide you through its main functionalities. The more detailed instructions can be found in the vignette provided with the package or downloaded <a href="files/cgmisc-vignette.pdf">here</a>.</p>
                 
         <h2>Data</h2>
         <p>Whenever possible, the <strong>cgmisc</strong> package works with data structures implemented and used by the <a href="http://www.genabel.org/">GenABEL package</a>. In particular, the gwaa.data-class and the gwaa.scan-class structures are used.
